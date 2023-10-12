@@ -11,6 +11,7 @@ function App() {
 
   const handleAddTodo = () => {
     const name = todoNameRef.current.value;
+    if (!name || !name.trim()) return;
     setTodos((prevTodos) => {
       return [...prevTodos, { id: uuidv4(), name: name, completed: false }];
     });
