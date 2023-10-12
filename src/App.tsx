@@ -30,7 +30,7 @@ function App() {
       <input type="text" ref={todoNameRef} />
       <button onClick={handleAddTodo}>タスクの追加</button>
       <button>完了したタスクの削除</button>
-      <div>残りのタスク</div>
+      <div>残りのタスク:{todos.filter((todo) => !todo.completed).length}</div>
     </>
   );
 }
